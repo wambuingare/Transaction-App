@@ -20,68 +20,92 @@
         android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
         android:text="SendMoney"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="379dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpin"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/cancel"
+        android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="151dp"
         android:text="cancel"
-        tools:layout_editor_absoluteX="240dp"
-        tools:layout_editor_absoluteY="379dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toEndOf="@+id/btnSend"
+        app:layout_constraintTop_toBottomOf="@+id/etpin"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgPhonenumber"
         android:layout_width="53dp"
         android:layout_height="34dp"
         android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toStartOf="@+id/etphonenumber"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_phone_24"
-        tools:layout_editor_absoluteX="41dp" />
+        app:srcCompat="@drawable/ic_baseline_phone_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgAmount"
         android:layout_width="40dp"
         android:layout_height="34dp"
-        app:srcCompat="@drawable/ic_baseline_10k_24"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="120dp" />
+        android:layout_marginTop="33dp"
+        app:layout_constraintEnd_toStartOf="@+id/etamount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etphonenumber"
+        app:srcCompat="@drawable/ic_baseline_10k_24" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgPin"
         android:layout_width="36dp"
         android:layout_height="37dp"
-        app:srcCompat="@drawable/ic_baseline_fiber_pin_24"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="183dp" />
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etpin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etpin"
+        app:srcCompat="@drawable/ic_baseline_fiber_pin_24" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/etamount"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="109dp" />
+        android:text="Amount"
+        app:layout_constraintStart_toEndOf="@+id/imgAmount"
+        app:layout_constraintTop_toBottomOf="@+id/etphonenumber" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/etpin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="183dp" />
+        android:text="pin"
+        app:layout_constraintStart_toEndOf="@+id/imgPin"
+        app:layout_constraintTop_toBottomOf="@+id/etamount" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/etphonenumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="22dp"
         android:ems="10"
         android:inputType="phone"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="42dp" />
+        android:text="Phone Number"
+        app:layout_constraintBottom_toTopOf="@+id/etamount"
+        app:layout_constraintStart_toEndOf="@+id/imgPhonenumber"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
